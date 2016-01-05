@@ -2,9 +2,6 @@ module.exports = {
   region: 'eu',
   maintenance: false,
   stack: 'cedar-14',
-  config_vars: {
-    MONGOLAB_URI: 'mongodb://momasz:test1234@ds039095.mongolab.com:39095/book_inventory'
-  },
   addons: {},
   features: {
     'runtime-dyno-metadata': {

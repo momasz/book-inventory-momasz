@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "mocha",
-    "lint": "jshint --exclude=node_modules/** **/*.js"
+    "lint": "jshint --exclude=node_modules/** **/*.js",
+    "heroku": "node infrastructure/heroku.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +18,9 @@
     "q": "^1.4.1"
   },
   "devDependencies": {
+    "heroin-js": "^1.4.0",
     "jshint": "^2.8.0",
+    "lodash": "^3.10.1",
     "mocha": "2.3.4",
     "supertest": "1.1.0"
   }
