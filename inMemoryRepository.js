@@ -7,7 +7,7 @@ function getAll () {
 function save (object) {
   collections.push(object);
 
-  return Promise.resolve(collections);
+  return Promise.resolve(object);
 }
 
 function checkISBN (isbn) {
