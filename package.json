@@ -5,11 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "lint": "jshint --exclude=node_modules/** **.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "4.13.3"
+    "body-parser": "1.14.2",
+    "express": "4.13.3",
+    "mongodb": "^2.1.2",
+    "q": "^1.4.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.8.0",
+    "mocha": "2.3.4",
+    "supertest": "1.1.0"
   }
 }
