@@ -18,7 +18,15 @@ module.exports = function (stockRepository) {
         .checkISBN(isbn)
         .then(function (result) {
           if (result > 0) {
-            res.status(200).json({count: result });
+            res.format({
+              'text/html': function() {
+                res.status(200).send('<p>Count: ' + result + '</p>');
+              },
+
+              'application/json': function() {
+                res.status(200).json({count: result });
+              }
+            });
           } else {
             res.status(404).send({message: "Not Found"});
           }
